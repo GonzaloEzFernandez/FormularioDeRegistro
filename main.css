@@ -1,0 +1,121 @@
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(black, rgba(194, 6, 194, 0.753));
+    font-family: 'Roboto', sans-serif;
+}
+
+
+
+.form {
+    background-color: rgb(255, 255, 255);
+    border-radius: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 0rem 2.5rem;
+    box-shadow: 3px 3px 3px 3px rgba(0, 0, 0, 0.103);
+    
+}
+
+.form h1 {
+    text-align: center;
+    font-size: 700;
+    padding-bottom: 0;
+    margin-bottom: .8rem;
+    margin-top: 2.3rem;
+}
+
+.form .barra {
+    background: linear-gradient(to right, transparent, rgba(177, 6, 177, 0.822), transparent);
+    height: 2px;
+    width: 100%;
+    margin-bottom: .6rem;
+}
+
+.form input {
+    border: none;
+    padding: .8rem;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.300);
+    width: 100%;
+    transition: 1s;
+    font-size: 1rem;
+}
+
+.form input:focus {
+    border-bottom-color: rgb(156, 0, 156);
+}
+
+.form label {
+    transition: 1s ease all;
+    position: absolute;
+    color: rgba(0, 0, 0, 0.350);
+    left: 5px;
+    top: 25px;
+    
+}
+
+ input:focus~label,
+ input:valid~label {
+    top: 5px;
+    font-size: .8rem;
+    color: rgb(156, 0, 156);
+}
+
+
+.form .grupo {
+    position: relative;
+    padding: 1.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+}
+
+input:focus {
+    outline: none;
+}
+
+.form .button {
+    background-color: transparent;
+    border: none;
+    padding: 1rem;
+    margin: 2rem;
+    width: 60%;
+    border-radius: .7rem;
+    cursor: pointer;
+    transition: .2s;
+    font-size: 1rem;
+    font-family: 'Roboto';
+    transition: .6s ease;
+    box-shadow: 3px 3px 3px 3px rgba(0, 0, 0, 0.158);
+}
+
+.form .button:hover {
+    transform: scale(1.05);
+}
+
+
+.button:focus {
+    color: rgba(177, 6, 177, 0.822);
+}
+
+.form .warnings {
+    color: red;
+}
+
+.form .span {
+    color: red;
+    font-size: .8rem;
+    margin-top: .5rem;
+}
+
+/* input.error {
+    border-bottom: red;
+    width: 100%;
+} */
