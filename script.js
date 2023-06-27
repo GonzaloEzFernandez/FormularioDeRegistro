@@ -1,11 +1,14 @@
-const nombre = document.querySelector("#name");
+
+
+
+/* const nombre = document.querySelector("#name");
 const email = document.querySelector("#email");
 const pass = document.querySelector("#password");
 const form = document.querySelector("#form");
 const parrafo = document.querySelector("#warnings");
 
-let emailRegex = /[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?/g
-let passRegex = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z]).{8,}$/gm;
+let emailRegex = /[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?/;
+let passRegex = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z]).{8,}$/;
 
 form.addEventListener("submit", (e)=> {
     e.preventDefault();
@@ -26,9 +29,6 @@ function valdiarFormualrio() {
     return nombreValido && emailValido && passValido
 }
 
-// Crear variable con elemento y valor de nombre.
-// Comparar el valor del elemento.length si este es menor a 0.
-// Si es asi, crear span para tener una alerta.
 
 function validInputs(mensaje, e) {
     let elemento = e.target;
@@ -50,7 +50,7 @@ function validInputs(mensaje, e) {
 
 function validEmailAddress(mensaje, e) {
     let elemento = e.target;
-    let emailRegex = /[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?/g
+    let emailRegex = /[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?/;
 
     let spanAnterior = elemento.nextElementSibling;
     if (spanAnterior && spanAnterior.classList.contains("span")) {
@@ -68,7 +68,7 @@ function validEmailAddress(mensaje, e) {
 
 function validPassword(mensaje, e) {
     let elemento = e.target
-    let passRegex = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z]).{8,}$/gm;
+    let passRegex = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z]).{8,}$/;
 
     if(!passRegex.test(elemento.value)) {
         crearSpan(mensaje, elemento)
@@ -102,3 +102,4 @@ pass.addEventListener("input", (e) => validPassword("Contraseña incorrecta", e)
 
 
 
+ */
