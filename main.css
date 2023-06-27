@@ -67,7 +67,8 @@ body {
 
 
 
-.form .grupo {
+.form .grupo-usuario,
+ .grupo-email, .grupo-password {
     position: relative;
     padding: 1.5rem;
     display: flex;
@@ -113,11 +114,26 @@ input:focus {
     margin-top: .5rem;
 }
 
-.form i {
+.form .icono-xmark  {
     display: none;
+    font-size: 1.2rem;
+    color: red;
+    position: absolute;
+    right: 1rem;
+    top: 2.3rem;
+}
+
+
+.form .icono-check {
+    display: none;
+    font-size: 1.2rem;
+    color: rgba(177, 6, 177, 0.822);
+    position: absolute;
+    right: 1rem;
+    top: 2.3rem;
 }
  
-.form .fa-circle-xmark.activo {
+/* .form .fa-circle-xmark.activo {
     font-size: 1.2rem;
     display: block;
     color: red;
@@ -133,4 +149,4 @@ input:focus {
     position: absolute;
     right: 1rem;
     top: 2.3rem;
-}
+} */
