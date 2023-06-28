@@ -43,7 +43,7 @@ body {
     text-align: center;
 }
 
-.main button {
+.main .button {
     background-color: transparent;
     border: none;
     padding: 1rem;
@@ -57,12 +57,19 @@ body {
     box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.158);
 }
 
-.main button a {
+.main .button a {
     text-decoration: none;
     color: black;
     font-size: 1rem;
 }
 
+.main .button:hover {
+    transform: scale(1.05);
+}
+
+.button a:focus {
+    color: rgba(177, 6, 177, 0.886);
+}
 
 @media screen and (max-width: 980px) {
    .main {

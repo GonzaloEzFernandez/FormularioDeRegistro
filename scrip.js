@@ -10,6 +10,8 @@ const expresiones = {
     password: /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z]).{8,}$/, //- al menos 8 caracteres -al menos 1 letra mayúscula, 1 letra minúscula y 1 número -Puede contener caracteres especiales
 }
 
+let valid = true;
+
 function spanError(parentElement, mensaje) {
     
     let spanError = document.createElement("span");
@@ -40,12 +42,14 @@ function validarFormulario(e) {
                 document.querySelector(".grupo-usuario .icono-xmark").style.display = "none";
 
                 sacarSpan(parentElement);
+                valid = true;
 
             } else {
                 document.querySelector(".grupo-usuario .icono-xmark").style.display = "block";
                 document.querySelector(".grupo-usuario .icono-check").style.display = "none";
 
                 spanError(parentElement, `${e.target.name} is invalid.`);
+                valid = false;
             }
         break;
         case "email":
@@ -54,11 +58,13 @@ function validarFormulario(e) {
                 document.querySelector(".grupo-email .icono-xmark").style.display = "none";
 
                 sacarSpan(parentElement);
+                valid = true;
             } else {
                 document.querySelector(".grupo-email .icono-xmark").style.display = "block";
                 document.querySelector(".grupo-email .icono-check").style.display = "none";
 
-                spanError(parentElement, `${e.target.name} is invalid.`); 
+                spanError(parentElement, `${e.target.name} is invalid.`);
+                valid = false;
             }
         break;
         case "password":
@@ -67,11 +73,13 @@ function validarFormulario(e) {
                 document.querySelector(".grupo-password .icono-xmark").style.display = "none";
 
                 sacarSpan(parentElement);
+                valid = true;
             } else {
                 document.querySelector(".grupo-password .icono-xmark").style.display = "block";
                 document.querySelector(".grupo-password .icono-check").style.display = "none"; 
 
                 spanError(parentElement, `${e.target.name} is invalid.`); 
+                valid = false;
             }  
     }
   
@@ -83,5 +91,8 @@ inputs.forEach((input) => {
 });
 
 form.addEventListener("submit", (e) => {
-    e.preventDefault();
+    if (!valid) {
+      e.preventDefault();  
+    }
+    
 })
