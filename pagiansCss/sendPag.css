@@ -9,12 +9,13 @@ body {
 
 .main {
     background-color: white;
-    width: 30%;
+    width: 40%;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-flow: column wrap;
     border-radius: 2rem;
+    margin: 1rem;
 }
 
 
@@ -41,6 +42,7 @@ body {
     padding: .9rem;
     line-height: 1.5rem;
     text-align: center;
+    /* width: 80%; */
 }
 
 .main .button {
@@ -48,8 +50,8 @@ body {
     border: none;
     padding: 1rem;
     margin-bottom: 1rem;
-    width: 45%;
-    border-radius: .7rem;
+    /* width: auto; */
+    border-radius: 1rem;
     cursor: pointer;
     transition: .2s;
     font-family: 'Roboto';
@@ -71,31 +73,17 @@ body {
     color: rgba(177, 6, 177, 0.886);
 }
 
-@media screen and (max-width: 980px) {
-   .main {
-    width: 40%;
-   }
+
+@media screen and (max-width: 849px) {
+    .main {
+        width: auto;
+        margin:3rem;
+    }
 }
 
-@media screen and (max-width: 780px) {
+@media screen and (max-width: 568px) {
     .main {
-     width: 50%;
+        width: auto;
+        margin: 1rem;
     }
- }
-
- @media screen and (max-width: 510px) {
-
-    .main .icono-check {
-        font-size: 1.8rem;
-    }
-    .main .h1 {
-        font-size: 25px;
-    }
-    .main .parrafo-final {
-        font-size: 16px;
-    }
-
-    .main button a {
-        font-size: 15px;
-    }
- }
+}
