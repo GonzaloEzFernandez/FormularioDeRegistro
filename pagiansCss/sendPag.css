@@ -1,0 +1,94 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(black, rgba(194, 6, 194, 0.753));
+    font-family: 'Roboto', sans-serif;
+}
+
+.main {
+    background-color: white;
+    width: 30%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column wrap;
+    border-radius: 2rem;
+}
+
+
+.main .icono-check {
+    font-size: 2.3rem;
+    color: rgba(177, 6, 177, 0.822);
+    margin: 1rem 0 0 0;
+}
+
+.main .h1 {
+    text-align: center;
+    padding: 0 1rem 0 1rem;
+}
+
+.main .barra {    
+    background:linear-gradient(to right, transparent, rgba(177, 6, 177, 0.822), transparent);
+    width: 100%;
+    height: 0.1rem;
+    padding-top: 0;
+}
+
+
+.main .parrafo-final {
+    padding: .9rem;
+    line-height: 1.5rem;
+    text-align: center;
+}
+
+.main button {
+    background-color: transparent;
+    border: none;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    width: 45%;
+    border-radius: .7rem;
+    cursor: pointer;
+    transition: .2s;
+    font-family: 'Roboto';
+    transition: .6s ease;
+    box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.158);
+}
+
+.main button a {
+    text-decoration: none;
+    color: black;
+    font-size: 1rem;
+}
+
+
+@media screen and (max-width: 980px) {
+   .main {
+    width: 40%;
+   }
+}
+
+@media screen and (max-width: 780px) {
+    .main {
+     width: 50%;
+    }
+ }
+
+ @media screen and (max-width: 510px) {
+
+    .main .icono-check {
+        font-size: 1.8rem;
+    }
+    .main .h1 {
+        font-size: 25px;
+    }
+    .main .parrafo-final {
+        font-size: 16px;
+    }
+
+    .main button a {
+        font-size: 15px;
+    }
+ }

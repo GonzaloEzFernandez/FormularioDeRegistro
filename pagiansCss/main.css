@@ -114,6 +114,7 @@ input:focus {
     margin-top: .5rem;
 }
 
+
 .form .icono-xmark  {
     display: none;
     font-size: 1.2rem;
@@ -133,20 +134,13 @@ input:focus {
     top: 2.3rem;
 }
  
-/* .form .fa-circle-xmark.activo {
-    font-size: 1.2rem;
-    display: block;
-    color: red;
-    position: absolute;
-    right: 1rem;
-    top: 2.3rem;
+.form .spanCheck {
+    color: rgba(177, 6, 177, 0.822);
+    font-size: 1rem;
 }
 
-.form .fa-circle-check.activo {
-    font-size: 1.2rem;
-    display: block;
-    color: rgba(177, 6, 177, 0.822);
-    position: absolute;
-    right: 1rem;
-    top: 2.3rem;
-} */
+.form .spanError {
+    color: red;
+    font-size: 1rem;
+}
+

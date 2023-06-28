@@ -10,43 +10,68 @@ const expresiones = {
     password: /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z]).{8,}$/, //- al menos 8 caracteres -al menos 1 letra mayúscula, 1 letra minúscula y 1 número -Puede contener caracteres especiales
 }
 
-
-function spanError(e) {
-    let span = document.createElement("span");
-    span.classList.add("span");
-    span.textContent = "Mensaje de error";
-
+function spanError(parentElement, mensaje) {
     
+    let spanError = document.createElement("span");
+    spanError.classList.add("spanError");
+    spanError.textContent = mensaje;
 
+    if (parentElement.querySelector(".spanError")) {
+        parentElement.removeChild(parentElement.querySelector(".spanError"));
+    }
+    parentElement.appendChild(spanError);
+}
+
+function sacarSpan(parentElement) {
+    let spanCheck = parentElement.querySelector(".spanError");
+    if (spanCheck) {
+        parentElement.removeChild(spanCheck);
+    }
 }
 
 function validarFormulario(e) {
+
+    const parentElement = e.target.parentElement;
+
     switch (e.target.name) {
         case "usuario":
             if (expresiones.usuario.test(e.target.value)) {
                 document.querySelector(".grupo-usuario .icono-check").style.display = "block";
                 document.querySelector(".grupo-usuario .icono-xmark").style.display = "none";
+
+                sacarSpan(parentElement);
+
             } else {
                 document.querySelector(".grupo-usuario .icono-xmark").style.display = "block";
                 document.querySelector(".grupo-usuario .icono-check").style.display = "none";
+
+                spanError(parentElement, `${e.target.name} is invalid.`);
             }
         break;
         case "email":
             if (expresiones.email.test(e.target.value)) {
                 document.querySelector(".grupo-email .icono-check").style.display = "block";
                 document.querySelector(".grupo-email .icono-xmark").style.display = "none";
+
+                sacarSpan(parentElement);
             } else {
                 document.querySelector(".grupo-email .icono-xmark").style.display = "block";
-                document.querySelector(".grupo-email .icono-check").style.display = "none";   
+                document.querySelector(".grupo-email .icono-check").style.display = "none";
+
+                spanError(parentElement, `${e.target.name} is invalid.`); 
             }
         break;
         case "password":
             if (expresiones.password.test(e.target.value)) {
                 document.querySelector(".grupo-password .icono-check").style.display = "block";
                 document.querySelector(".grupo-password .icono-xmark").style.display = "none";
+
+                sacarSpan(parentElement);
             } else {
                 document.querySelector(".grupo-password .icono-xmark").style.display = "block";
-                document.querySelector(".grupo-password .icono-check").style.display = "none";   
+                document.querySelector(".grupo-password .icono-check").style.display = "none"; 
+
+                spanError(parentElement, `${e.target.name} is invalid.`); 
             }  
     }
   
