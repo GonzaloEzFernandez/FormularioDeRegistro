@@ -44,6 +44,7 @@ body {
     width: 100%;
     transition: 1s;
     font-size: 1rem;
+    background-color: white;
 }
 
 .form input:focus {
@@ -51,23 +52,23 @@ body {
 }
 
 .form label {
-    transition: 1s ease all;
     position: absolute;
-    color: rgba(0, 0, 0, 0.350);
-    left: 5px;
-    top: 25px;
-    
-}
-
- input:focus~label,
- input:valid~label {
-    top: 5px;
-    font-size: .8rem;
     color: rgb(156, 0, 156);
+    opacity: 0;
+    transition: 1s;
+    top: 4px;
+}
+
+.form input:focus~label {
+    color:rgb(156, 0, 156);
+    font-size: 1rem;
+    opacity: 1;
 }
 
 
-.form .grupo {
+
+.form .grupo-usuario,
+ .grupo-email, .grupo-password {
     position: relative;
     padding: 1.5rem;
     display: flex;
@@ -105,9 +106,7 @@ input:focus {
     color: rgba(177, 6, 177, 0.822);
 }
 
-.form .warnings {
-    color: red;
-}
+
 
 .form .span {
     color: red;
@@ -115,7 +114,33 @@ input:focus {
     margin-top: .5rem;
 }
 
-/* input.error {
-    border-bottom: red;
-    width: 100%;
-} */
+
+.form .icono-xmark  {
+    display: none;
+    font-size: 1.2rem;
+    color: red;
+    position: absolute;
+    right: 1rem;
+    top: 2.3rem;
+}
+
+
+.form .icono-check {
+    display: none;
+    font-size: 1.2rem;
+    color: rgba(177, 6, 177, 0.822);
+    position: absolute;
+    right: 1rem;
+    top: 2.3rem;
+}
+ 
+.form .spanCheck {
+    color: rgba(177, 6, 177, 0.822);
+    font-size: 1rem;
+}
+
+.form .spanError {
+    color: red;
+    font-size: 1rem;
+}
+
